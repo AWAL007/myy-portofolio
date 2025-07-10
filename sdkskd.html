@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alex Johnson - Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-900 text-white overflow-x-hidden">
+    <!-- Particles Background -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Navigation -->
+    <nav
+      class="fixed top-0 w-full bg-gray-900/80 backdrop-blur-sm z-50 transition-all duration-300"
+      id="navbar"
+    >
+      <div class="container mx-auto px-6 py-4">
+        <div class="flex justify-between items-center">
+          <div class="text-2xl font-bold text-gradient">AW</div>
+          <div class="hidden md:flex space-x-8">
+            <a href="#home" class="hover:text-purple-400 transition-colors"
+              >Home</a
+            >
+            <a href="#about" class="hover:text-purple-400 transition-colors"
+              >About</a
+            >
+            <a href="#skills" class="hover:text-purple-400 transition-colors"
+              >Skills</a
+            >
+            <a href="#projects" class="hover:text-purple-400 transition-colors"
+              >Projects</a
+            >
+            <a href="#contact" class="hover:text-purple-400 transition-colors"
+              >Contact</a
+            >
+          </div>
+          <button class="md:hidden" id="mobile-menu-btn">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="min-h-screen flex items-center justify-center gradient-bg relative"
+    >
+      <div class="container mx-auto px-6 text-center">
+        <div class="floating">
+          <div
+            class="w-32 h-32 mx-auto mb-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-6xl"
+          >
+            👨‍💻
+          </div>
+        </div>
+        <h1 class="text-5xl md:text-7xl font-bold mb-6 slide-in">
+          Halo,saya <span class="text-yellow-300">AWALUDDIN</span>
+        </h1>
+        <p id="typing-text" class="text-xl md:text-2xl mb-8 typing-cursor"></p>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section
+      id="about"
+      class="py-20 bg-gray-800 min-h-screen flex items-center justify-center"
+    >
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-16 slide-in">
+          Tentang Saya
+        </h2>
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="slide-in">
+            <div
+  class="w-full h-80 bg-gradient-to-br from-purple-400 to-blue-500 rounded-2xl flex items-center justify-center text-8xl transition-transform duration-300 hover:scale-110 hover:rotate-6"
+            >
+              🚀
+            </div>
+          </div>
+          <div class="slide-in">
+            <p class="text-lg mb-6 leading-relaxed">
+              Saya adalah seorang full-stack developer dengan pengalaman 1
+              tahun, namun memiliki semangat belajar yang tinggi dan terus
+              berusaha mengembangkan kemampuan setiap harinya. Saya percaya
+              bahwa teknologi terus berkembang, dan saya pun ingin tumbuh
+              bersama di dalamnya.
+            </p>
+            <p class="text-lg mb-6 leading-relaxed">
+              Dengan antusiasme dan rasa ingin tahu yang besar, saya senang
+              mengeksplorasi teknologi baru, menyelesaikan tantangan-tantangan
+              dalam pengembangan aplikasi web, serta terus belajar dari setiap
+              proyek yang saya kerjakan.
+            </p>
+            <div class="flex flex-wrap gap-3">
+              <span class="px-4 py-2 bg-purple-600 rounded-full text-sm"
+                >Creative Problem Solver</span
+              >
+              <span class="px-4 py-2 bg-blue-600 rounded-full text-sm"
+                >Team Player</span
+              >
+              <span class="px-4 py-2 bg-green-600 rounded-full text-sm"
+                >Continuous Learner</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-900 min-h-screen">
+      <!-- Skills Tabs -->
+      <div class="px-5 py-5 md:px-12 md:py-10 text-left mx-3">
+        <article>
+          <header>
+            <div class="text-2xl font-bold text-white mb-5 flex items-center">
+              <div class="h-[1px] w-10 bg-amber-200 md:w-20"></div>
+              &nbsp; Skills
+            </div>
+          </header>
+
+          <!-- Tabs -->
+          <div>
+            <ul class="flex flex-wrap text-sm font-medium text-gray-500 mb-5">
+              <li class="mr-2">
+                <button
+                  class="inline-block px-4 py-3 rounded-lg hover:text-white text-amber-200 bg-amber-200 bg-opacity-10"
+                  onclick="showTab('tech')"
+                >
+                  Tech Stack
+                </button>
+              </li>
+              <li class="mr-2">
+                <button
+                  class="inline-block px-4 py-3 rounded-lg hover:text-white"
+                  onclick="showTab('tools')"
+                >
+                  Tools
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Tech Stack -->
+          <div
+            id="tech"
+            class="flex grid-cols-2 gap-4 pb-32 md:grid-cols-3 md:gap-8 xl:grid-cols-4 xl:gap-10 2xl:gap-12"
+          >
+            <!-- HTML -->
+            <div
+              class="item-tech flex items-center gap-2 rounded borderborder-amber-200 px-2 py-2 hover:bg-amber-200 hover:bg-opacity-10 md:gap-3 lg:px-3"
+            >
+              <div
+                class="flex w-12 items-center justify-center lg:h-16 lg:w-16 p-0 lg:p-2"
+              >
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/1051/1051277.png"
+                  alt="HTML"
+                  class="img-tech h-[65%] w-[65%] lg:h-[85%] lg:w-[85%]"
+                />
+              </div>
+              <div
+                class="flex items-center text-sm md:text-base lg:text-lg relative"
+              >
+                <div class="tech font-medium">HTML</div>
+                <div class="status-tech">Advanced</div>
+              </div>
+            </div>
+
+            <!-- CSS -->
+            <div
+              class="item-tech flex items-center gap-2 rounded border border-amber-200 px-2 py-2 hover:bg-amber-200 hover:bg-opacity-10 md:gap-3 lg:px-3"
+            >
+              <div
+                class="flex h-12 w-12 items-center justify-center lg:h-16 lg:w-16 p-0 lg:p-2"
+              >
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/732/732190.png"
+                  alt="CSS"
+                  class="img-tech h-[65%] w-[65%] lg:h-[85%] lg:w-[85%]"
+                />
+              </div>
+              <div
+                class="flex items-center text-sm md:text-base lg:text-lg relative"
+              >
+                <div class="tech font-medium">CSS</div>
+                <div class="status-tech">Advanced</div>
+              </div>
+            </div>
+
+            <!-- JavaScript -->
+            <div
+              class="item-tech flex items-center gap-2 rounded border border-amber-200 px-2 py-2 hover:bg-amber-200 hover:bg-opacity-10 md:gap-3 lg:px-3"
+            >
+              <div
+                class="flex h-12 w-12 items-center justify-center lg:h-16 lg:w-16 p-0 lg:p-2"
+              >
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png"
+                  alt="JavaScript"
+                  class="img-tech h-[65%] w-[65%] lg:h-[85%] lg:w-[85%]"
+                />
+              </div>
+              <div
+                class="flex items-center text-sm md:text-base lg:text-lg relative"
+              >
+                <div class="tech font-medium">JavaScript</div>
+                <div class="status-tech">Advanced</div>
+              </div>
+            </div>
+
+            <!-- PHP -->
+            <div
+              class="item-tech flex items-center gap-2 rounded border border-amber-200 px-2 py-2 hover:bg-amber-200 hover:bg-opacity-10 md:gap-3 lg:px-3"
+            >
+              <div
+                class="flex h-12 w-12 items-center justify-center lg:h-16 lg:w-16 p-0 lg:p-2"
+              >
+                <img
+                  src="https://cdn.iconscout.com/icon/free/png-256/free-php-2038871-1720084.png"
+                  alt="PHP"
+                  class="img-tech h-[65%] w-[65%] lg:h-[85%] lg:w-[85%]"
+                />
+              </div>
+              <div
+                class="flex items-center text-sm md:text-base lg:text-lg relative"
+              >
+                <div class="tech font-medium">PHP</div>
+                <div class="status-tech">Advanced</div>
+              </div>
+            </div>
+
+            <!-- Tailwind CSS -->
+            <div
+              class="item-tech flex items-center gap-2 rounded border border-amber-200 px-2 py-2 hover:bg-amber-200 hover:bg-opacity-10 md:gap-3 lg:px-3"
+            >
+              <div
+                class="flex h-12 w-12 items-center justify-center lg:h-16 lg:w-16 p-0 lg:p-2"
+              >
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg"
+                  alt="Tailwind CSS"
+                  class="img-tech h-[65%] w-[65%] lg:h-[85%] lg:w-[85%]"
+                />
+              </div>
+              <div
+                class="flex items-center text-sm md:text-base lg:text-lg relative"
+              >
+                <div class="tech font-medium">Tailwind CSS</div>
+                <div class="status-tech">Advanced</div>
+              </div>
+            </div>
+
+            <!-- Bootstrap -->
+            <div
+              class="item-tech flex items-center gap-2 rounded border border-amber-200 px-2 py-2 hover:bg-amber-200 hover:bg-opacity-10 md:gap-3 lg:px-3"
+            >
+              <div
+                class="flex h-12 w-12 items-center justify-center lg:h-16 lg:w-16 p-0 lg:p-2"
+              >
+                <img
+                  src="https://getbootstrap.com/docs/5.2/assets/brand/bootstrap-logo-shadow.png"
+                  alt="Bootstrap"
+                  class="img-tech h-[65%] w-[65%] lg:h-[85%] lg:w-[85%]"
+                />
+              </div>
+              <div
+                class="flex items-center text-sm md:text-base lg:text-lg relative"
+              >
+                <div class="tech font-medium">Bootstrap</div>
+                <div class="status-tech">Intermediate</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tools -->
+          <div
+            id="tools"
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-white"
+          >
+            <div
+              class="item-tech flex items-center gap-2 rounded border border-amber-200 px-2 py-2 hover:bg-amber-200 hover:bg-opacity-10 md:gap-3 lg:px-3"
+            >
+              <div
+                class="flex h-12 w-12 items-center justify-center lg:h-16 lg:w-16 p-0 lg:p-2"
+              >
+                <img
+                  src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
+                  alt="Git"
+                  class="img-tech h-[65%] w-[65%] lg:h-[85%] lg:w-[85%]"
+                />
+              </div>
+              <div
+                class="flex items-center text-sm md:text-base lg:text-lg relative"
+              >
+                <div class="tech font-medium">Git</div>
+                <div class="status-tech">Version Control</div>
+              </div>
+            </div>
+            <div
+              class="item-tech flex items-center gap-2 rounded border border-amber-200 px-2 py-2 hover:bg-amber-200 hover:bg-opacity-10 md:gap-3 lg:px-3"
+            >
+              <div
+                class="flex h-12 w-12 items-center justify-center lg:h-16 lg:w-16 p-0 lg:p-2"
+              >
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/5968/5968313.png"
+                  alt="Git"
+                  class="img-tech h-[65%] w-[65%] lg:h-[85%] lg:w-[85%]"
+                />
+              </div>
+              <div
+                class="flex items-center text-sm md:text-base lg:text-lg relative"
+              >
+                <div class="tech font-medium">MySQL</div>
+                <div class="status-tech">Version Control</div>
+              </div>
+            </div>
+            <div
+              class="item-tech flex items-center gap-2 rounded border border-amber-200 px-2 py-2 hover:bg-amber-200 hover:bg-opacity-10 md:gap-3 lg:px-3"
+            >
+              <div
+                class="flex h-12 w-12 items-center justify-center lg:h-16 lg:w-16 p-0 lg:p-2"
+              >
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+                  alt="Git"
+                  class="img-tech h-[65%] w-[65%] lg:h-[85%] lg:w-[85%]"
+                />
+              </div>
+              <div
+                class="flex items-center text-sm md:text-base lg:text-lg relative"
+              >
+                <div class="tech font-medium">Github</div>
+                <div class="status-tech">Version Control</div>
+              </div>
+            </div>
+
+            <!-- Tambahkan item lainnya dengan format yang sama -->
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-800 min-h-screen">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-16 slide-in">projects</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <a
+            href="https://github.com/AWAL007/ecomerch"
+            target="_blank"
+            class="block"
+          >
+            <div
+              class="card-hover bg-gray-900 rounded-2xl overflow-hidden slide-in"
+            >
+              <div
+                class="h-48 bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-6xl"
+              >
+                <img src="bahan2.jpg" alt="" />
+              </div>
+              <div class="p-6">
+                <h3 class="text-gray font-semibold mb-3">
+                  E-Commerce Platform
+                </h3>
+                <p class="text-gray-400 mb-4">
+                  sistem pelayanan transaksi dan pengaturan keuangan dan stok
+                </p>
+                <div class="flex gap-2 flex-wrap">
+                  <span class="px-3 py-1 bg-purple-600 rounded-full text-xs"
+                    >PHP</span
+                  >
+                  <span class="px-3 py-1 bg-blue-600 rounded-full text-xs"
+                    >JavaScript</span
+                  >
+                  <span class="px-3 py-1 bg-green-600 rounded-full text-xs"
+                    >html</span
+                  >
+                </div>
+              </div>
+            </div>
+          </a>
+          <a
+            href="https://github.com/AWAL007/Siparkar"
+            target="_blank"
+            class="block"
+          >
+            <div
+              class="card-hover bg-gray-900 rounded-2xl overflow-hidden slide-in"
+            >
+              <div
+                class="h-48 bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-6xl"
+              >
+                <img src="siparkar.png" alt="" />
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-semibold mb-3">Prototype Parkir</h3>
+                <p class="text-gray-400 mb-4">
+                  Prototype parkir untuk mempercepat pelayanan parkir
+                </p>
+                <div class="flex gap-2 flex-wrap">
+                  <span class="px-3 py-1 bg-yellow-600 rounded-full text-xs"
+                    >jav</span
+                  >
+                  <span class="px-3 py-1 bg-red-600 rounded-full text-xs"
+                    >MongoDB</span
+                  >
+                </div>
+              </div>
+            </div>
+          </a>
+ <a
+            href="https://github.com/Reeku27/KASTRANS"
+            target="_blank"
+            class="block"
+          >
+          <div
+            class="card-hover bg-gray-900 rounded-2xl overflow-hidden slide-in"
+          >
+            <div
+              class="h-48 bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center text-6xl"
+            >
+              <img src="kasatrans.png" alt="" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-3">Mobile App</h3>
+              <p class="text-gray-400 mb-4">
+                aplikasi untuk mengatur mobil rental
+              </p>
+              <div class="flex gap-2 flex-wrap">
+                <span class="px-3 py-1 bg-cyan-600 rounded-full text-xs"
+                  >Java</span
+                >
+                <span class="px-3 py-1 bg-orange-600 rounded-full text-xs"
+                  >Firebase</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section
+      id="contact"
+      class="py-20 gradient-bg min-h-screen scroll-mt-20 flex items-center justify-center"
+    >
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-4xl font-bold mb-8 slide-in">Mari Bekerja Sama</h2>
+        <p class="text-xl mb-12 slide-in">
+          Siap mewujudkan ide-ide Anda? Mari kita ciptakan sesuatu yang luar
+          biasa bersama!
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center slide-in">
+          <a
+            href="https://wa.me/6285244360493"
+            target="_blank"
+            class="px-8 py-3 bg-white text-gray-900 rounded-full font-semibold hover:bg-gray-100 transition-all glow inline-block"
+          >
+            Kirim Pesan
+          </a>
+        </div>
+        <div class="flex justify-center space-x-6 mt-12 slide-in">
+          <a
+            href="mailto:1a108awaluddin@gmail.com"
+            target="_blank"
+            class="text-3xl hover:text-purple-300 transition-colors"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/732/732200.png"
+              alt="Instagram Icon"
+              class="w-10 h-10 transition-transform hover:scale-110"
+            />
+          </a>
+          <a
+            href="https://wa.me/6285244360493"
+            target="_blank"
+            class="text-3xl hover:text-purple-300 transition-colors"
+          >
+            <img
+              src="   https://cdn-icons-png.flaticon.com/512/15713/15713434.png "
+              alt="Wa Icon"
+              class="w-10 h-10 transition-transform hover:scale-110"
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/awaluddin-355931373?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            target="_blank"
+            class="text-3xl hover:text-purple-300 transition-colors"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/3670/3670045.png"
+              alt="linkedin Icon"
+              class="w-10 h-10 transition-transform hover:scale-110"
+            />
+          </a>
+          <a
+            href="https://www.instagram.com/a_wal007?igsh=MW93MmMxbTlmcjhhcg=="
+            target="_blank"
+            class="text-3xl hover:text-purple-300 transition-colors"
+          >
+            <img
+              src="   https://cdn-icons-png.flaticon.com/512/2111/2111463.png "
+              alt="Instagram Icon"
+              class="w-10 h-10 transition-transform hover:scale-110"
+            />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-gray-900 text-white py-10 text-center">
+      <p class="text-gray-400">© 2025 Awaluddin. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
